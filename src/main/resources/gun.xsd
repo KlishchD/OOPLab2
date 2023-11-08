@@ -21,10 +21,16 @@
         </xsd:restriction>
     </xsd:simpleType>
 
+    <xsd:simpleType name="sightingRange">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minExclusive value="0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
     <xsd:complexType name="ttc">
         <xsd:sequence>
             <xsd:element name="FiringRange" type="range"/>
-            <xsd:element name="SightingRange" type="xsd:integer"/>
+            <xsd:element name="SightingRange" type="sightingRange"/>
             <xsd:element name="Magazine" type="xsd:boolean"/>
             <xsd:element name="Sight" type="xsd:boolean"/>
         </xsd:sequence>
